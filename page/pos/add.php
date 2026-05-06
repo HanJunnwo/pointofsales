@@ -61,7 +61,8 @@ if (isset($_POST['submit'])) {
     }
 
     $fmt_kembalian = number_format($kembalian, 0, ',', '.');
-    echo "<script>alert('Transaksi berhasil! Kembalian: Rp $fmt_kembalian'); window.location='index.php?halaman=data_penjualan';</script>";
+    $_SESSION['pos_success'] = "Transaksi berhasil! Kembalian: Rp $fmt_kembalian";
+    echo "<script>window.location='index.php?halaman=data_penjualan';</script>";
     exit;
 }
 ?>
